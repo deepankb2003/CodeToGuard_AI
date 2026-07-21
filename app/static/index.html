@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code To Guard AI</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">CG</span>
+      <div class="brand-text">
+        <h1>Code To Guard AI</h1>
+        <p>Automated PR review history</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <label class="filter">
+        <span>Repo</span>
+        <input id="repo-filter" type="text" placeholder="owner/name" autocomplete="off" />
+      </label>
+      <label class="filter" title="Optional — reviews that exact PR (any state). Leave blank to use the repo's latest open PR.">
+        <span>PR #</span>
+        <input id="pr-number" type="number" min="1" placeholder="latest" autocomplete="off" />
+      </label>
+      <button id="refresh-btn" class="btn">Refresh</button>
+      <button id="run-review-btn" class="btn btn-primary">Run Review</button>
+    </div>
+  </header>
+
+  <div id="run-status" class="run-status" hidden></div>
+
+  <main class="layout">
+    <section class="review-list" aria-label="Reviews">
+      <div id="review-list-status" class="list-status">Loading reviews…</div>
+      <ul id="review-list"></ul>
+    </section>
+
+    <section class="review-detail" aria-label="Review detail">
+      <div id="detail-empty" class="empty-state">
+        <div class="empty-icon">🛡️</div>
+        <h2>No review selected</h2>
+        <p>Pick a review from the list to see its findings.</p>
+      </div>
+      <div id="detail-content" class="detail-content" hidden></div>
+    </section>
+  </main>
+
+  <template id="finding-row-template">
+    <li class="finding-row">
+      <span class="severity-dot"></span>
+      <div class="finding-body">
+        <div class="finding-meta">
+          <span class="agent-tag"></span>
+          <span class="location"></span>
+        </div>
+        <p class="finding-message"></p>
+      </div>
+      <span class="severity-label"></span>
+    </li>
+  </template>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
