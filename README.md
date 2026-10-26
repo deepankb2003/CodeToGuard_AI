@@ -94,3 +94,9 @@ See [`.env.example`](.env.example) for the full list — the important ones:
 7. **Tests, Docker, CI** — pytest suite, `Dockerfile`, GitHub Actions workflow.
 
 All seven phases above are implemented in this repo.
+
+## 🚀 Live Demo
+
+Explore the deployed application here:
+
+🔗 [**Volatility Forecasting — Live Application**](https://volatility-forecasting.onrender.com/)
