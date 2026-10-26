@@ -95,3 +95,8 @@ See [`.env.example`](.env.example) for the full list — the important ones:
 
 All seven phases above are implemented in this repo.
 
+## 🚀 Live Demo
+
+Explore the deployed application here:
+
+🔗 [**CodeToGuard AI — Live Application**](https://codetoguard-ai.onrender.com/)
